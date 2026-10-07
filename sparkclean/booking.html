@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a professional cleaning service with SparkClean. Easy online booking for residential and commercial cleaning.">
+  <title>Book a Cleaning — SparkClean Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✨</div>
+        Spark<span>Clean</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <div class="nav-cta">
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Booking Hero -->
+  <section class="about-hero" style="padding-bottom:3rem;">
+    <div class="container">
+      <h1 class="animate-on-scroll">Book Your <span class="text-primary">Cleaning</span></h1>
+      <p class="animate-on-scroll delay-1">Fill out the form below and we'll get back to you within 24 hours to confirm your booking.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="booking-grid">
+        <!-- Left: Info -->
+        <div class="booking-info animate-on-scroll">
+          <div class="booking-info-card">
+            <h3>Why Book With Us?</h3>
+            <p>Experience professional cleaning with guaranteed satisfaction and transparent pricing.</p>
+            <div class="booking-steps">
+              <div class="booking-step">
+                <div class="booking-step-number">1</div>
+                <div class="booking-step-text">
+                  <h4>Submit Your Request</h4>
+                  <p>Fill out the booking form with your cleaning needs and preferred schedule.</p>
+                </div>
+              </div>
+              <div class="booking-step">
+                <div class="booking-step-number">2</div>
+                <div class="booking-step-text">
+                  <h4>Get Confirmation</h4>
+                  <p>We'll review your request and confirm the details within 24 hours.</p>
+                </div>
+              </div>
+              <div class="booking-step">
+                <div class="booking-step-number">3</div>
+                <div class="booking-step-text">
+                  <h4>Enjoy a Clean Space</h4>
+                  <p>Our professional team arrives on time and delivers exceptional results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <h4>Need Help?</h4>
+              <p>Call us at +234 801 234 5678 or email bookings@sparkclean.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">⚡</div>
+            <div class="contact-info-text">
+              <h4>Same-Day Service</h4>
+              <p>Need urgent cleaning? We offer same-day service for an additional fee.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="booking-form-card animate-on-scroll delay-1">
+          <h3>Request a Cleaning Service</h3>
+          <p>Fields marked with * are required.</p>
+          <form data-validate data-form="booking">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+234 800 000 0000" required>
+              </div>
+              <div class="form-group">
+                <label for="serviceType">Service Type *</label>
+                <select id="serviceType" name="serviceType" class="form-control" required>
+                  <option value="">Select a service</option>
+                  <option value="Residential Cleaning">Residential Cleaning — from $80</option>
+                  <option value="Office Cleaning">Office Cleaning — from $150</option>
+                  <option value="Deep Cleaning">Deep Cleaning — from $200</option>
+                  <option value="Carpet Cleaning">Carpet Cleaning — from $120/room</option>
+                  <option value="Window Cleaning">Window Cleaning — from $60</option>
+                  <option value="Move-in/Move-out Cleaning">Move-in/Move-out Cleaning — from $250</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferredDate">Preferred Date *</label>
+                <input type="date" id="preferredDate" name="preferredDate" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="address">Address *</label>
+                <input type="text" id="address" name="address" class="form-control" placeholder="Your full address" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Any special requests, access instructions, or details about your space..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              Submit Booking Request →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="subtitle">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;">
+        <div class="contact-info-card animate-on-scroll" style="margin-bottom:1rem;">
+          <div class="contact-info-text">
+            <h4>How far in advance should I book?</h4>
+            <p>We recommend booking at least 48 hours in advance. However, we do offer same-day service based on availability.</p>
+          </div>
+        </div>
+        <div class="contact-info-card animate-on-scroll delay-1" style="margin-bottom:1rem;">
+          <div class="contact-info-text">
+            <h4>What's included in the price?</h4>
+            <p>All our prices include cleaning products, equipment, and labor. There are no hidden fees. The final price depends on the size of your space and specific requirements.</p>
+          </div>
+        </div>
+        <div class="contact-info-card animate-on-scroll delay-2" style="margin-bottom:1rem;">
+          <div class="contact-info-text">
+            <h4>Do I need to provide cleaning supplies?</h4>
+            <p>No, our team comes fully equipped with professional-grade, eco-friendly cleaning supplies and equipment.</p>
+          </div>
+        </div>
+        <div class="contact-info-card animate-on-scroll delay-3">
+          <div class="contact-info-text">
+            <h4>What if I'm not satisfied?</h4>
+            <p>We offer a 100% satisfaction guarantee. If you're not happy with the results, contact us within 24 hours and we'll re-clean for free.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">✨</div>
+            Spark<span>Clean</span>
+          </a>
+          <p>Professional cleaning services for homes and businesses. Trusted by thousands of customers since 2014.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential Cleaning</a></li>
+            <li><a href="services.html">Office Cleaning</a></li>
+            <li><a href="services.html">Deep Cleaning</a></li>
+            <li><a href="services.html">Carpet Cleaning</a></li>
+            <li><a href="services.html">Window Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get cleaning tips and exclusive offers delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'You have been added to our mailing list.', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SparkClean Services. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    // Set min date to today
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('preferredDate');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+      }
+    });
+  </script>
+</body>
+</html>

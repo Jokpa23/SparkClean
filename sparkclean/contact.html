@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SparkClean Services — get in touch for inquiries, quotes, or support. We're here to help with all your cleaning needs.">
+  <title>Contact Us — SparkClean Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✨</div>
+        Spark<span>Clean</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="login.html">Login</a>
+        <div class="nav-cta">
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Contact Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="animate-on-scroll">Get in <span class="text-primary">Touch</span></h1>
+      <p class="animate-on-scroll delay-1">Have questions or ready to book? We'd love to hear from you. Reach out and our team will respond promptly.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact Info -->
+        <div class="animate-on-scroll">
+          <h2 style="margin-bottom:.5rem;">Contact Information</h2>
+          <p style="color:var(--gray-500);margin-bottom:2rem;">Fill out the form or reach us through any of the channels below.</p>
+          
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-text">
+                <h4>Phone</h4>
+                <p>+234 801 234 5678</p>
+                <p>+234 802 345 6789</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-text">
+                <h4>Email</h4>
+                <p>info@sparkclean.com</p>
+                <p>bookings@sparkclean.com</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-text">
+                <h4>Location</h4>
+                <p>42 Trans Amadi Industrial Layout</p>
+                <p>Port Harcourt, Rivers State, Nigeria</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">🕐</div>
+              <div class="contact-info-text">
+                <h4>Business Hours</h4>
+                <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
+                <p>Sat: 9:00 AM – 4:00 PM | Sun: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63512.89238153488!2d6.95!3d4.7833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cd6ab1fce3a3%3A0xb71f3c1e3a9a8e00!2sPort%20Harcourt%2C%20Rivers%20State!5e0!3m2!1sen!2sng!4v1700000000000" allowfullscreen="" loading="lazy" title="SparkClean Location"></iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrapper animate-on-scroll delay-1">
+          <h3 style="margin-bottom:.5rem;">Send Us a Message</h3>
+          <p style="color:var(--gray-500);margin-bottom:1.5rem;">We typically respond within 24 hours during business days.</p>
+          <form data-validate data-form="contact">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name *</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email *</label>
+                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="+234 800 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject *</label>
+              <select id="contactSubject" name="subject" class="form-control" required>
+                <option value="">Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Booking Question">Booking Question</option>
+                <option value="Service Information">Service Information</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" class="form-control" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">✨</div>
+            Spark<span>Clean</span>
+          </a>
+          <p>Professional cleaning services for homes and businesses. Trusted by thousands of customers since 2014.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential Cleaning</a></li>
+            <li><a href="services.html">Office Cleaning</a></li>
+            <li><a href="services.html">Deep Cleaning</a></li>
+            <li><a href="services.html">Carpet Cleaning</a></li>
+            <li><a href="services.html">Window Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get cleaning tips and exclusive offers delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'You have been added to our mailing list.', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SparkClean Services. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

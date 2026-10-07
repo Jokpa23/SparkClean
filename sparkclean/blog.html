@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read the latest cleaning tips, company news, and special promotions from SparkClean Services.">
+  <title>Blog — SparkClean Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✨</div>
+        Spark<span>Clean</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <div class="nav-cta">
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1 class="animate-on-scroll">Our <span class="text-primary">Blog</span></h1>
+      <p class="animate-on-scroll delay-1">Cleaning tips, industry insights, company updates, and special offers to help you maintain a cleaner, healthier space.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="section">
+    <div class="container">
+      <!-- Category Filter -->
+      <div class="text-center animate-on-scroll" style="margin-bottom:2.5rem;">
+        <div style="display:inline-flex;gap:.5rem;flex-wrap:wrap;justify-content:center;">
+          <button class="btn btn-primary btn-sm blog-filter active" data-filter="all">All</button>
+          <button class="btn btn-outline-primary btn-sm blog-filter" data-filter="Tips">Tips</button>
+          <button class="btn btn-outline-primary btn-sm blog-filter" data-filter="Business">Business</button>
+          <button class="btn btn-outline-primary btn-sm blog-filter" data-filter="Promotions">Promotions</button>
+        </div>
+      </div>
+      
+      <div class="blog-grid" id="blog-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest cleaning tips and exclusive promotions.</p>
+        <div style="max-width:400px;margin:0 auto;">
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'You have been added to our mailing list.', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required style="flex:1;">
+            <button type="submit" class="btn btn-white">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">✨</div>
+            Spark<span>Clean</span>
+          </a>
+          <p>Professional cleaning services for homes and businesses. Trusted by thousands of customers since 2014.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Residential Cleaning</a></li>
+            <li><a href="services.html">Office Cleaning</a></li>
+            <li><a href="services.html">Deep Cleaning</a></li>
+            <li><a href="services.html">Carpet Cleaning</a></li>
+            <li><a href="services.html">Window Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get cleaning tips and exclusive offers delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!', 'You have been added to our mailing list.', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SparkClean Services. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const allPosts = JSON.parse(getBlogPosts());
+      const icons = { 'Tips': '📝', 'Business': '💼', 'Promotions': '🎉' };
+      
+      function renderPosts(posts) {
+        const grid = document.getElementById('blog-grid');
+        if (!grid) return;
+        
+        if (posts.length === 0) {
+          grid.innerHTML = '<p class="text-center text-gray" style="grid-column:1/-1;padding:3rem;">No blog posts found in this category.</p>';
+          return;
+        }
+        
+        grid.innerHTML = posts.map((p, i) => `
+          <div class="blog-card animate-on-scroll delay-${(i % 3) + 1}">
+            <div class="blog-card-image">
+              <div class="blog-img-placeholder">${icons[p.category] || '📝'}</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-tag">${p.category}</span>
+                <span>📅 ${formatDate(p.date)}</span>
+                <span>✍️ ${p.author}</span>
+              </div>
+              <h3><a href="#">${p.title}</a></h3>
+              <p>${p.excerpt}</p>
+              <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--gray-100);">
+                <p style="color:var(--gray-600);font-size:.9rem;line-height:1.7;margin-bottom:1rem;">${p.content}</p>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        
+        initScrollAnimations();
+      }
+      
+      renderPosts(allPosts);
+      
+      // Category filters
+      document.querySelectorAll('.blog-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.blog-filter').forEach(b => {
+            b.classList.remove('active', 'btn-primary');
+            b.classList.add('btn-outline-primary');
+          });
+          btn.classList.add('active', 'btn-primary');
+          btn.classList.remove('btn-outline-primary');
+          
+          const filter = btn.getAttribute('data-filter');
+          const filtered = filter === 'all' ? allPosts : allPosts.filter(p => p.category === filter);
+          renderPosts(filtered);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
